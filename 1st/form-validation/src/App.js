@@ -1,0 +1,76 @@
+import "./App.css";
+import { useState } from "react";
+
+function App() {
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [mobno, setMobno] = useState("");
+  const [email, setEmail] = useState("");
+
+  function handleSubmit() {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    if (fname.length === 0) {
+      alert("Enter valid first name");
+      return;
+    }
+    if (lname.length === 0) {
+      alert("Enter valid last name");
+      return;
+    }
+    if (mobno.length < 10 || mobno.length > 10) {
+      alert("Enter valid Mobile no. Please exclude +91");
+      return;
+    }
+    if(!email.match(emailRegex)){
+      alert("Enter valid Email");
+      return;
+    }
+  }
+  return (
+    <div className="App">
+      <a>First Name :- </a>
+      <input
+        className="fname"
+        type="text"
+        placeholder="Enter the first-name"
+        onChange={(e) => {
+          setFname(e.target.value);
+        }}
+      ></input>
+
+      <a>Last Name :- </a>
+      <input
+        className="lname"
+        type="text"
+        placeholder="Enter the last-name"
+        onChange={(e) => {
+          setLname(e.target.value);
+        }}
+      ></input>
+
+      <a>Mobile no :- </a>
+      <input
+        className="mobno"
+        type="text"
+        placeholder="Enter the Mobile no"
+        onChange={(e) => {
+          setMobno(e.target.value);
+        }}
+      ></input>
+
+      <a>Email :- </a>
+      <input
+        className="email"
+        type="text"
+        placeholder="Enter the Email"
+        onChange={(e) => {
+          setEmail(e.target.value);
+        }}
+      ></input>
+
+      <button onClick={() => handleSubmit()}>Submit</button>
+    </div>
+  );
+}
+
+export default App;
