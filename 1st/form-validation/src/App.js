@@ -21,14 +21,14 @@ function App() {
       alert("Enter valid Mobile no. Please exclude +91");
       return;
     }
-    if(!email.match(emailRegex)){
+    if (!email.match(emailRegex)) {
       alert("Enter valid Email");
       return;
     }
   }
   return (
     <div className="App">
-      <a>First Name :- </a>
+      <label>First Name :- </label>
       <input
         className="fname"
         type="text"
@@ -38,7 +38,7 @@ function App() {
         }}
       ></input>
 
-      <a>Last Name :- </a>
+      <label>First Name :- </label>
       <input
         className="lname"
         type="text"
@@ -48,7 +48,7 @@ function App() {
         }}
       ></input>
 
-      <a>Mobile no :- </a>
+      <label>First Name :- </label>
       <input
         className="mobno"
         type="text"
@@ -58,7 +58,7 @@ function App() {
         }}
       ></input>
 
-      <a>Email :- </a>
+      <label>First Name :- </label>
       <input
         className="email"
         type="text"
