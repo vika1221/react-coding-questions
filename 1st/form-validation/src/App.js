@@ -38,7 +38,7 @@ function App() {
         }}
       ></input>
 
-      <label>First Name :- </label>
+      <label>last-name :- </label>
       <input
         className="lname"
         type="text"
@@ -48,7 +48,7 @@ function App() {
         }}
       ></input>
 
-      <label>First Name :- </label>
+      <label>Mobile no :- </label>
       <input
         className="mobno"
         type="text"
@@ -58,7 +58,7 @@ function App() {
         }}
       ></input>
 
-      <label>First Name :- </label>
+      <label>Email :- </label>
       <input
         className="email"
         type="text"
