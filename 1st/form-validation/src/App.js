@@ -7,7 +7,8 @@ function App() {
   const [mobno, setMobno] = useState("");
   const [email, setEmail] = useState("");
 
-  function handleSubmit() {
+  const handleSubmit=(e) =>{
+    //e.preventDefault();
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     if (fname.length === 0) {
       alert("Enter valid first name");
